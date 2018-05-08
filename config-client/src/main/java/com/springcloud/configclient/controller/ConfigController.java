@@ -18,10 +18,13 @@ public class ConfigController {
     @Value("${test}")
     private String test;
 
+    @Value("${jdbc.url}")
+    private String jdbcUrl;
+
     @RequestMapping("/hello")
     public String hello(){
 
-        return this.port + " " + this.name + " " + this.test;
+        return this.port + " " + this.name + " " + this.test + " " + this.jdbcUrl;
     }
 
 }
